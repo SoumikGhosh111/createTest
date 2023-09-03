@@ -171,5 +171,6 @@ function kelvinToCelsius(kelvin) {
 function createMap(lat, long){  
   const latitude = lat; 
   const longitude = long; 
-  mapDiv.innerHTML = `<iframe src="https://maps.google.com/maps?q=latitude,longitude&z=9&output=embed" width="100%" height="100%" frameborder="0" style="border:0"></iframe>`
+  const url = `https://maps.google.com/maps/?q=${latitude},${longitude}&output=embed`; 
+  mapDiv.innerHTML = `<iframe src=${url} width="100%" height="100%" frameborder="0" style="border:0"></iframe>`;
 }
